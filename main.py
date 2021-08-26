@@ -10,7 +10,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logging.info('Starting Bot...')
 
 
-def high_p_command(update):
+def high_p_command(update, context):
     """
     Handles the high protein command returns list sorted by protein percentage.
     """
@@ -18,7 +18,7 @@ def high_p_command(update):
     update.message.reply_text(response)
 
 
-def high_f_command(update):
+def high_f_command(update, context):
     """
     Handles the fat protein command returns list sorted by fat percentage.
     """
@@ -26,7 +26,7 @@ def high_f_command(update):
     update.message.reply_text(response)
 
 
-def high_c_command(update):
+def high_c_command(update, context):
     """
     Handles the high carbohydrates command returns list sorted by carbohydrates percentage.
     """
@@ -34,7 +34,7 @@ def high_c_command(update):
     update.message.reply_text(response)
 
 
-def high_fp_command(update):
+def high_fp_command(update, context):
     """
     Handles the high fat and protein command returns list sorted by fat and protein percentage.
     """
@@ -59,7 +59,7 @@ def high_cp_command(update, context):
     update.message.reply_text(response)
 
 
-def help_command(update):
+def help_command(update, context):
     """
     Handles the help command returns list of all possible commands with a short explanation. \n
     """
@@ -74,7 +74,7 @@ def help_command(update):
                               '/high_fp will return list of all the food items by their fat and proteins percentage.')
 
 
-def handle_message(update):
+def handle_message(update, context):
     """
     Handles the messages expecting a food name returns graph image of nutritive composition.
     """
